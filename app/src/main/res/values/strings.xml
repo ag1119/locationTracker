@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LocationTracker</string>
+    <string name="ip_address_tracker">IP Address Tracker</string>
+    <string name="ip_address">IP ADDRESS</string>
+    <string name="sample_ip">192.212.174.101</string>
+    <string name="location">LOCATION</string>
+    <string name="sample_location">Brooklyn, NY 10001</string>
+    <string name="time_zone">TIME ZONE</string>
+    <string name="sample_time_zone">UTC-05:00</string>
+    <string name="isp">ISP</string>
+    <string name="sample_isp">SpaceX Starlink</string>
+</resources>
