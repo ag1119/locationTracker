@@ -1,6 +1,7 @@
-package com.learning.locationtracker.repo
+package com.learning.locationtracker.repo.location
 
 import com.learning.locationtracker.LocationInfo
+import com.learning.locationtracker.repo.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Response
 

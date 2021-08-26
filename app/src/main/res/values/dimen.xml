@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">24sp</dimen>
     <dimen name="text_size_big">32sp</dimen>
+    <dimen name="logo_width">136dp</dimen>
+    <dimen name="logo_height">64dp</dimen>
+    <dimen name="margin_start">16dp</dimen>
+    <dimen name="margin_end">16dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="margin_bottom">16dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="card_view_top_margin">174dp</dimen>
+    <dimen name="logo_top_margin">32dp</dimen>
+    <dimen name="login_btn_margin">32dp</dimen>
 </resources>

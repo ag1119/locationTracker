@@ -1,4 +1,4 @@
-package com.learning.locationtracker.repo
+package com.learning.locationtracker.repo.location
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.learning.locationtracker.repo
+package com.learning.locationtracker.repo.location
 
 import retrofit2.Call
 import retrofit2.http.GET

@@ -29,20 +29,29 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_big"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="@dimen/margin_top"/>
+                <TextView
+                    android:id="@+id/myIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myIp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"/>
                 <LinearLayout
                     android:id="@+id/llh"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="64dp"
                     android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    android:layout_marginStart="@dimen/margin_start"
                     android:background="@drawable/edit_back_white"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="@dimen/margin_top">
                     <EditText
                         android:id="@+id/ip_et"
                         android:layout_width="0dp"
-                        android:layout_height="64dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="4"
                         android:background="@null"
                         android:inputType="text"
@@ -53,7 +62,7 @@
                     <ImageView
                         android:id="@+id/image_btn"
                         android:layout_width="0dp"
-                        android:layout_height="64dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/edit_back_black"
                         android:scaleType="center"
@@ -75,15 +84,15 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:layout_marginStart="@dimen/margin_start"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="160dp">
+            android:layout_marginTop="@dimen/card_view_top_margin">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="@dimen/padding">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/location"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="@dimen/margin_top"/>
                 <TextView
                     android:id="@+id/location_tv"
                     android:layout_width="wrap_content"
@@ -119,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/time_zone"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="@dimen/margin_top"/>
                 <TextView
                     android:id="@+id/timeZone_tv"
                     android:layout_width="wrap_content"
@@ -134,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/isp"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="@dimen/margin_top"/>
                 <TextView
                     android:id="@+id/isp_tv"
                     android:layout_width="wrap_content"

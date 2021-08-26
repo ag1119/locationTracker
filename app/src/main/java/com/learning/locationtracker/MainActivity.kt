@@ -1,10 +1,13 @@
 package com.learning.locationtracker
 
+import android.net.wifi.WifiManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.text.format.Formatter
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -13,7 +16,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.learning.locationtracker.repo.LocationController
+import com.learning.locationtracker.repo.location.LocationController
 import com.learning.locationtracker.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationController.EventListener {
@@ -23,9 +26,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationController
     private lateinit var imageBtn: ImageView
     private lateinit var locationController: LocationController
     private lateinit var mapFragment: SupportMapFragment
+    private lateinit var myIpAddress: String
+    private lateinit var wifiManager: WifiManager
+    private lateinit var myIp: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViews()
+        initMyIp()
         initMap()
 
         imageBtn.setOnClickListener{
@@ -40,6 +47,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationController
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         ipEditText = findViewById(R.id.ip_et)
         imageBtn = findViewById(R.id.image_btn)
+        myIp = findViewById(R.id.myIp)
         locationController = LocationController(this)
     }
 
@@ -47,6 +55,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationController
         mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    }
+
+    private fun initMyIp(){
+        wifiManager = applicationContext.getSystemService(WIFI_SERVICE) as WifiManager
+        myIpAddress = Formatter.formatIpAddress(wifiManager.connectionInfo.ipAddress)
+        myIp.text = "My IP: $myIpAddress"
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
