@@ -1,10 +1,13 @@
-package com.learning.locationtracker.Repo
+package com.learning.locationtracker.repo
 
 import com.google.gson.annotations.SerializedName
 
 class LocationResp {
     @SerializedName("status")
     var status: String? = null
+
+    @SerializedName("message")
+    var message: String? = null
 
     @SerializedName("lat")
     var lat: Double? = null

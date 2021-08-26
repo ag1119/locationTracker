@@ -1,4 +1,4 @@
-package com.learning.locationtracker.Repo
+package com.learning.locationtracker.repo
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
